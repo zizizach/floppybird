@@ -21,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: zizizach/flappybird:latest
+          tags: zizizach/flappybird:${{github.ref_name}}
