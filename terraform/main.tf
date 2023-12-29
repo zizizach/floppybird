@@ -17,7 +17,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("zachgpt-f8a69433fb95.json")
+  credentials = file("/tmp/zachgpt-f8a69433fb95.json")
 
   project = local.project
   region  = local.region

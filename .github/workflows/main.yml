@@ -26,7 +26,7 @@ jobs:
         run: |
           cd ${{github.workspace}}
           ls -lrt
-          echo "${{ secrets.GCPCREDENTIAL }}" >> "${{github.workspace}}/terraform/zachgpt-f8a69433fb95.json"
+          echo "${{ secrets.GCPCREDENTIAL }}" >> "/tmp/zachgpt-f8a69433fb95.json"
       - name: terraform
         run: |
           cd terraform
