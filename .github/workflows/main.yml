@@ -23,6 +23,6 @@ jobs:
           push: true
           tags: zizizach/flappybird:${{github.ref_name}}
       - name: get-credential-secret
-        run: ${{ secrets.GCPCREDENTIAL }} >> something.json
+        run: echo "${{ secrets.GCPCREDENTIAL }}" >> something.json
       - name: read file
         run: cat something.json
