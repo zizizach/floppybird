@@ -23,6 +23,10 @@ jobs:
           push: true
           tags: zizizach/flappybird:${{github.ref_name}}
       - name: get-credential-secret
-        run: echo "${{ secrets.GCPCREDENTIAL }}" >> something.json
-      - name: read file
-        run: cat something.json
+        run: echo "${{ secrets.GCPCREDENTIAL }}" >> "terraform/zachgpt-f8a69433fb95.json"
+      - name: terraform
+        run: |
+          cd terraform
+          terraform init
+          ls -lrt
+        
