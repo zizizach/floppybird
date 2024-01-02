@@ -22,14 +22,14 @@ jobs:
         with:
           push: true
           tags: zizizach/flappybird:${{github.ref_name}}
-      - name: get-credential-secret
-        run: |
-          cd ${{github.workspace}}
-          ls -lrt
-          echo "${{ secrets.GCPCREDENTIAL }}" >> "/tmp/zachgpt-f8a69433fb95.json"
-      - name: terraform
-        run: |
-          cd terraform
-          terraform init
-          ls -lrt
+      # - name: get-credential-secret
+      #   run: |
+      #     cd ${{github.workspace}}
+      #     ls -lrt
+      #     echo "${{ secrets.GCPCREDENTIAL }}" >> "/tmp/zachgpt-f8a69433fb95.json"
+      # - name: terraform
+      #   run: |
+      #     cd terraform
+      #     terraform init
+      #     ls -lrt
         
